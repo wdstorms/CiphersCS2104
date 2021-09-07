@@ -1,0 +1,5 @@
+moe:UXoa92ZxZimus:1002:1003:Moe Howard,,,:/home/moe:/bin/bash
+larry:$1$mZK.ozbi$R5Lx7FUTAfay.ekJjBxYB0:1003:1004:Larry Fine,,,:/home/larry:/bin/bash
+shemp:$?$shatwofivesix$prxbTSVvLc.IazwHBLafrG0WYEHzRr1Y.vRApCfJrN.:1004:1005:Shemp Howard,,,:/home/shemp:/bin/bash
+curley:X92vOppkAh9CLedTmUnL3.QRxZ05uwQChkjGzYxtcN6$5$outoforder$:1005:1006:Curley Howard,,,:/home/curley:/bin/bash
+joe:/W3FtaCO5ZFeEMvj4EZloCv6ZiMreqH1Crffji3aA1Y1tlhegNk73DHWxOzm.UF3dn8YYJSqNFB//vT7EszBwS$sdrawkcab$6$:1006:1007:Joe Besser,,,:/home/joe:/bin/bash
