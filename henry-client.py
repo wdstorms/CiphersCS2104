@@ -1,8 +1,14 @@
 import Cipher
 c1 = Cipher.KeyCipher()
-enc = 'sxbaperxaleghlveewfr'
-key = 'apple'
-ranKey = c1.decrypt(enc, key)
-print()
-c2 = Cipher.CeaserCipher()
-c2.decrypt(ranKey)
+c2 = Cipher.CaesarCipher()
+c3 = Cipher.Atbash()
+enc = 'ZGYZHSRHHRNKOVYFGVZHBGLYIVZP'
+key = 'Atbash'
+print(c3.decrypt(enc))
+
+
+
+
+
+
+input('\nenter to esc')
