@@ -110,8 +110,21 @@ class LetterFreq:
         for pair in self.freq:
             out += (pair[0] + ": " + str(pair[1]) + '\n')
         return out
-            
-        
+
+
+class Reverse:
+
+    def __init__(self):
+        a = 1
+
+    def reverse(self, s):
+        out = ""
+        for char in s:
+            out = char + out
+
+        return out
+
+    
             
 
 
