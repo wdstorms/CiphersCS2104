@@ -76,19 +76,6 @@ class Base64:
     def __init__(self):
         self.abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
 
-    def decrypt(self, s):
-        out = ''
-        b = ''
-        for char in s:
-            if (char == '='):
-                index = 0
-            else:
-                index = self.abc.index(char)
-            b += format(index, "b")
-        print(b)
-                
-            
-
 class LetterFreq:
 
     def __init__(self):

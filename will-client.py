@@ -1,9 +1,13 @@
 import Cipher
 
-r = Cipher.Reverse()
+d = Cipher.KeyCipher()
 
-enc = "my racecar"
+enc = "sxbaperxaleghlveewfr"
 
-dec = r.reverse(enc)
+key = "apple"
+dec = d.decrypt(enc, key)
 
-print(dec)
+c = Cipher.CaesarCipher()
+
+
+print(c.decrypt(dec))
