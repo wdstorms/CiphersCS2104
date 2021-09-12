@@ -3,24 +3,30 @@ class CaesarCipher:
     def __init__(self):
         self.abc = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
 
-    def decrypt(self, enc):
+    def decrypt26(self, enc):
         enc = enc.lower()
         out = []
         for i in range(26):
-            dec = ''
-            for char in enc:
-                if (char == ' '):
-                    print(' ', end='')
-                    dec += ' '
-                else:
-                    index = self.abc.index(char)
-                    newIndex = index + i
-                    newIndex = newIndex % 26
-                    print(self.abc[newIndex], end='')
-                    dec += self.abc[newIndex]
+            dec = self.decrypt(enc, i)
             out += [dec]
-            print()
         return out
+
+    def decrypt(self, enc, rotation):
+        enc = enc.lower()
+        unrot = (26 - rotation) % 26
+        dec = ''
+        for char in enc:
+            if (char == ' '):
+                print(' ', end='')
+                dec += ' '
+            else:
+                index = self.abc.index(char)
+                newIndex = index + unrot
+                newIndex = newIndex % 26
+                print(self.abc[newIndex], end='')
+                dec += self.abc[newIndex]
+        print()
+        return dec
 
 class KeyCipher:
     
@@ -91,15 +97,16 @@ class LetterFreq:
         
     def setFreq(self, s):
         s = s.lower()
-        freq = []
+        newFreq = []
         for letter in self.abc:
-            freq += [[letter, 0]]
+            newFreq += [[letter, 0]]
 
         for char in s:
-            index = self.abc.index(char)
-            freq[index][1] += 1
+            if (char != ' '):
+                index = self.abc.index(char)
+                newFreq[index][1] += 1
 
-        self.freq = freq
+        self.freq = newFreq
         return self.freq
 
     def getFreq(self):
